@@ -1,6 +1,5 @@
 package codigo;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,13 +16,7 @@ public class Fecha {
 
 	}
 
-	public boolean valida() {
-		if (dia < 1 || dia > 31)
-			return false;
-		if (mes < 1 || mes > 12)
-			return false;
-		if (anio < 0)
-			return false;
+	private int diasMes() {
 		// determinamos la cantidad de días del mes:
 		int diasMes = 0;
 		switch (mes) {
@@ -48,10 +41,19 @@ public class Fecha {
 			else
 				diasMes = 28;
 			break;
-
 		}
+		return diasMes;
+	}
 
-		if (dia > diasMes)
+	public boolean valida() {
+		if (dia < 1 || dia > 31)
+			return false;
+		if (mes < 1 || mes > 12)
+			return false;
+		if (anio < 0)
+			return false;
+
+		if (dia > diasMes())
 			return false;
 		else
 			return true;

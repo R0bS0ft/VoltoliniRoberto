@@ -10,6 +10,7 @@ public class TestFecha extends TestCase{
 	 * si es mejor crearlas como variables locales ya dentro del método testPrueba().
 	*/
 	
+	
 	//Fecha válida estándar
 	private Fecha fecha1 = new Fecha(10,5,2016);
 	//Fechas válidas límite
@@ -35,4 +36,5 @@ public class TestFecha extends TestCase{
 		assertEquals(fecha7.valida(), false);
 		assertEquals(fecha9.valida(), false);
 	}
+
 }
