@@ -1,5 +1,8 @@
 package test;
 
+/** Paquete para las clases de prueba
+ * 
+ */
 import codigo.Fecha;
 import junit.framework.TestCase; 
 import org.junit.Test;
@@ -10,6 +13,9 @@ public class TestFecha extends TestCase{
 	 * si es mejor crearlas como variables locales ya dentro del método testPrueba().
 	*/
 	
+	/**
+	 * Clase que contiene los casos de prueba
+	 */
 	
 	//Fecha válida estándar
 	private Fecha fecha1 = new Fecha(10,5,2016);

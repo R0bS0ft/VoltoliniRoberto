@@ -1,13 +1,28 @@
 package codigo;
-
+/**
+ * Paquete que contiene el código propiamente dicho, para separarlo del código
+ * correspondiente a las pruebas unitarias.
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Fecha {
+	/**
+	 * @author Rob
+	 * @version 1.2
+	 * 
+	 */
 	private int dia;
 	private int mes;
 	private int anio;
+	
+	/**
+	 * Esta es la clase fecha, sus tres atributos son privados.
+	 * @param dia número del día del mes en formato dd
+	 * @param mes número del mes del año en formato mm
+	 * @param anio año en formato yyyy
+	 */
 
 	public Fecha(int dia, int mes, int anio) {
 		this.dia = dia;
@@ -17,7 +32,10 @@ public class Fecha {
 	}
 
 	private int diasMes() {
-		// determinamos la cantidad de días del mes:
+		/**
+		 * Método que devuelve cuantos días tiene un mes
+		 * @return Dias que tiene el mes
+		 */
 		int diasMes = 0;
 		switch (mes) {
 		case 1:
@@ -50,6 +68,9 @@ public class Fecha {
 	}
 
 	public boolean valida() {
+		/**
+		 * Método para comprobar si una fecha es válida
+		 */
 		if (dia < 1 || dia > 31)
 			return false;
 		if (mes < 1 || mes > 12)
